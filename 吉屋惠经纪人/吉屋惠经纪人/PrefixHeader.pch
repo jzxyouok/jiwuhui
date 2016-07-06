@@ -1,0 +1,56 @@
+//
+//  PrefixHeader.pch
+//  吉屋惠经纪人
+//
+//  Created by mac on 16/5/14.
+//  Copyright © 2016年 zhangtao. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "NavigationViewController.h"
+#import "MyTabBarViewController.h"
+#import "MBProgressHUD+ZT.h"
+#import "UserInfo.h"
+#import "LoginViewController.h"
+#import "AFNetworking.h"
+#import "MJRefresh.h"
+#import "UIView+Extension.h"
+#import "UIImageView+WebCache.h"
+#import "MBProgressHUD+ZT.h"
+#import "ZTShowMessage.h"
+#import "NoDataView.h"
+#import "UserDetailViewController.h"
+#import "AgentModel.h"
+#import "WebViewController.h"
+
+#import <BaiduMapAPI_Base/BMKBaseComponent.h>                               //  引入base相关所有的头文件
+#import <BaiduMapAPI_Map/BMKMapComponent.h>                                 //  引入地图功能所有的头文件
+
+#define k_w [UIScreen mainScreen].bounds.size.width                         //  屏幕宽度
+#define k_h [UIScreen mainScreen].bounds.size.height                        //  屏幕高度
+#define kColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]               //  颜色
+#define kColor_alpha(r,g,b,al) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(al)]   //  颜色+alpha
+
+#define khomeListUrl        @"http://t.jiwu.com/apps!homeList.action"       //  首页楼盘列表
+#define kappPosterUrl       @"http://t.jiwu.com/apps!appPoster.action"      //  首页广告
+#define kloginUrl           @"http://t.jiwu.com/apps!login.action"          //  登录
+#define khomeNewDetailUrl   @"http://t.jiwu.com/apps!homeNewDetail.action"  //  楼盘详细信息
+#define kbbsListUrl         @"http://t.jiwu.com/apps!bbsList.action"        //  动态列表
+#define kpushDataUrl        @"http://t.jiwu.com/apps!pushData.action"       //  送客
+#define kgiftListUrl        @"http://t.jiwu.com/apps!giftList.action"       //  礼品列表
+#define kaddIntegralUrl     @"http://t.jiwu.com/apps!addIntegral.action"    //  每日签到
+#define kuserDetailUrl      @"http://t.jiwu.com/apps!userDetail.action"     //  用户详细信息
+#define kuploadlUrl         @"http://t.jiwu.com/apps!upload.action"         //  上传照片
+#define kupdateBaseInfoUrl  @"http://t.jiwu.com/apps!updateBaseInfo.action" //  更新用户信息
+#define kgetCityNameUrl     @"http://t.jiwu.com/apps!getCityName.action"    //  根据城市名获取地区信息
+
+#ifdef DEBUG
+#define NNLog(...) NSLog(@"%s %d\n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#else
+#define NNLog(...)
+#endif
+
+#endif /* PrefixHeader_pch */
